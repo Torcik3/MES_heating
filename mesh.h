@@ -9,7 +9,7 @@
 #include <vector>
 #include <algorithm>
 
-using namespace std; // Uwaga: w dużych projektach unika się tego w plikach .h, ale zostawiamy dla zgodności z Twoim kodem.
+using namespace std;
 
 class Node {
 public:
@@ -156,13 +156,13 @@ struct Surface {
     }
 };
 
-// --- Zmienne globalne (tylko deklaracje dzięki 'extern') ---
+
 extern MegaMatrix* megaMatrix_H;
 extern MegaMatrix* megaMatrix_HBC;
 extern MegaMatrix* megaMatrix_C;
 extern vector<double> megaVector;
 
-// --- Prototypy funkcji ---
+
 void solveLinearSystem(vector<vector<double>> A, vector<double> b, vector<double>& x, int n);
 vector<double> read_labels(string file, int size);
 vector<Node> read_points(string file, int size);
@@ -175,4 +175,4 @@ Matrix calculateBC(int methodG, Surface surface, int side, int elementIndex, Gri
 void calculateVectorBC(int methodG, Surface surface, int side, int elementIndex, Grid& grid, double alfa, double Tot);
 void calculate_H_C(GlobalData& GData, ElemUniv elemUniv, ElemUnivC elemUnivC, Jakobian jakobi, double x[], double y[], double wsp_ciep, Grid& grid, int slon, Surface surfaces[]);
 
-#endif // MES_H
+#endif

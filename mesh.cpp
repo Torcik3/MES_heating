@@ -1,12 +1,12 @@
 #include "mesh.h"
 
-// --- Definicje zmiennych globalnych ---
+
 MegaMatrix* megaMatrix_H = nullptr;
 MegaMatrix* megaMatrix_HBC = nullptr;
 MegaMatrix* megaMatrix_C = nullptr;
 vector<double> megaVector;
 
-// --- Implementacje funkcji ---
+
 
 void solveLinearSystem(vector<vector<double>> A, vector<double> b, vector<double>& x, int n) {
     for (int i = 0; i < n; ++i) {
@@ -25,7 +25,7 @@ void solveLinearSystem(vector<vector<double>> A, vector<double> b, vector<double
         }
 
         if (fabs(A[i][i]) < 1e-9) {
-            throw std::runtime_error("Uklad rownan jest osobliwy lub niejednoznaczny.");
+            throw std::runtime_error("osobliwy uklad rownan");
         }
 
         for (int k = i + 1; k < n; ++k) {
