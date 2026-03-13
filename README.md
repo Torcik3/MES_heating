@@ -11,8 +11,9 @@ A custom **C++** implementation of the Finite Element Method (FEM) for solving 2
 
 ## Quick Start
 ```bash
+mkdir build && cd build
+cmake ..
 
-g++ -std=c++20 main.cpp src/femCalculator.cpp src/mesh.cpp -o fem_solver
-
-./fem_solver
+cmake --build .
+./MES_Solver
 ```
