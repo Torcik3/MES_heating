@@ -1,4 +1,4 @@
-#include "femCalculator.h"
+#include "include/femCalculator.h"
 
 void buildGlobalMatrices(int methodG, GlobalData& gData, Grid& grid,MegaMatrix* megaMatrix_H, MegaMatrix* megaMatrix_C, MegaMatrix* megaMatrix_HBC, std::vector<double>& megaVector) {
     int numElements = (int)gData.data[9];

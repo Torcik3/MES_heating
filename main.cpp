@@ -1,6 +1,6 @@
 #include <iostream>
-#include "mesh.h"
-#include "femCalculator.h"
+#include "src/include/mesh.h"
+#include "src/include/femCalculator.h"
 
 int main() {
     const string file = "Test1_4_4.txt";

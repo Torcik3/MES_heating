@@ -4,6 +4,6 @@ project(MES)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(MES main.cpp
-        mesh.cpp
-        femCalculator.cpp
-        femCalculator.h)
+        src/mesh.cpp
+        src/femCalculator.cpp
+        src/include/femCalculator.h)
