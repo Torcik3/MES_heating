@@ -15,5 +15,5 @@ mkdir build && cd build
 cmake ..
 
 cmake --build .
-./MES_Solver
+./MES
 ```
